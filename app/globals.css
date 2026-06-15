@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Core palette ───────────────────────────────── */
+  --color-bg: #09090B;
+  --color-surface: #27272A;
+  --color-border: #3F3F46;
+
+  /* ── Accent ─────────────────────────────────────── */
+  --color-accent: #DFE104;
+  --color-accent-fg: #000000;
+
+  /* ── Text ───────────────────────────────────────── */
+  --color-text: #FAFAFA;
+  --color-muted: #A1A1AA;
+  --color-muted2: #52525B;
+
+  /* ── Legacy aliases (keep existing classes working) */
+  --color-cyan: #DFE104;
+  --color-hot: #DFE104;
+
+  /* ── Typography ─────────────────────────────────── */
+  --font-display: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #09090B;
+  color: #FAFAFA;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: #DFE104;
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #09090B;
+}
+::-webkit-scrollbar-thumb {
+  background: #DFE104;
+  border-radius: 0;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
